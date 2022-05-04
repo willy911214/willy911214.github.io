@@ -8,3 +8,9 @@ h1 {
 a:hover {
     color: red;
   }
+  img {
+    border: 1px solid rgba(92, 113, 246, 0.656);
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
