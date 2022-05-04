@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>劉俋辰</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link
+      rel="icon"
+      href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png"
+      type="image/x-icon"
+    />
+</head>
+<body>
+    <audio id="vd" src="五月天 Mayday【知足 Contentment】Official Music Video.mp3" autoplay controls loop></audio>
+    <script type="text/javascript">
+        window.onload = function(){
+                 setInterval("toggleSound()",100);
+            }
+    
+        function toggleSound() {
+                    var music = document.getElementById("vd");//獲取ID  
+                        
+                    if (music.paused) { //判讀是否播放  
+                        music.paused=false;
+                        music.play(); //沒有就播放 
+                    }    
+            }
+    </script>
+    <h1>劉俋辰</h1>
+    <a href="https://www.mingdao.edu.tw/homeX/Web/">明道中學</a>
+    <br>
+    <a href="https://web.ee.ntu.edu.tw/">台大電機系</a>
+    <ul>
+      <li><a href='https://lol.garena.tw/'>computer games</a></li>
+      <li><a href='https://zh.wikipedia.org/zh-tw/NBA'>basketball</a></li>
+      <li><a href='https://zh.m.wikipedia.org/zh-tw/ONE_PIECE'>comic</a></li>
+    </ul>
+    <img src="279061971_1588209048238989_4887266083909007712_n.jpg" alt="123">
+    <p>Date/Time: <span id="datetime"></span></p>
+
+    <script>
+      function startTime() {
+        var dt = new Date();
+        var y = dt.getFullYear();
+        var M = dt.getMonth();
+        var d = dt.getDate();
+        var h = dt.getHours();
+        var m = dt.getMinutes();
+        var s = dt.getSeconds();
+        document.getElementById("datetime").innerHTML =
+          ("0" + d).slice(-2) +
+          "-" +
+          ("0" + (M + 1)).slice(-2) +
+          "-" +
+          y +
+          " " +
+          ("0" + h).slice(-2) +
+          ":" +
+          ("0" + m).slice(-2) +
+          ":" +
+          ("0" + s).slice(-2);
+      }
+      setInterval(startTime, 1000);
+    </script>
+  </body>
+</html>
